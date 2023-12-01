@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spotify_API", "Spotify_API\Spotify_API.csproj", "{2394CA62-008B-427C-9674-68442CCDB763}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{D03473D8-D2C0-4210-BFA3-99E0EE838771}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2394CA62-008B-427C-9674-68442CCDB763}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2394CA62-008B-427C-9674-68442CCDB763}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2394CA62-008B-427C-9674-68442CCDB763}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2394CA62-008B-427C-9674-68442CCDB763}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2394CA62-008B-427C-9674-68442CCDB763} = {D03473D8-D2C0-4210-BFA3-99E0EE838771}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C4C89CD2-9424-4356-A3BF-0D140D8A8765}
+	EndGlobalSection
+EndGlobal
