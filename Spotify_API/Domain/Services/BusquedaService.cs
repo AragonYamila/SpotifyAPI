@@ -11,25 +11,36 @@ namespace Spotify_API.Domain.Services
             _busquedaRepository = busquedaRepository;
         }
 
-        public List<CancionDTO> ObtenerCancionPorAlbum(string nombreDelAlbum)
+        public List<ArtistaDTO> ObtenerArtistaPorNombre(string nombreDelArtista)
         {
-            return _busquedaRepository.ObtenerCancionPorAlbum(nombreDelAlbum);
+            return _busquedaRepository.ObtenerArtistaPorNombre(nombreDelArtista);
         }
 
-        public List<CancionDTO> ObtenerCancionPorArtista(string nombreDelArtista)
+        public List<CancionDTO> ObtenerCancionPorTodosLosCampos(string campo)
         {
-            return _busquedaRepository.ObtenerCancionPorArtista(nombreDelArtista);
+            List<CancionDTO> cancionPorTitulo = _busquedaRepository.ObtenerCancionPorTitulo(campo);
+            List<CancionDTO> cancionPorArtista = _busquedaRepository.ObtenerCancionPorArtista(campo);
+            List<CancionDTO> cancionPorGenero = _busquedaRepository.ObtenerCancionPorGenero(campo);
+            List<CancionDTO> cancionPorAlbum = _busquedaRepository.ObtenerCancionPorAlbum(campo);
+
+            List<CancionDTO> canciones = new List<CancionDTO>();
+            canciones.AddRange(cancionPorTitulo);
+            canciones.AddRange(cancionPorAlbum);
+            canciones.AddRange(cancionPorArtista);
+            canciones.AddRange(cancionPorGenero);
+
+            return canciones;
         }
-
-        public List<CancionDTO> ObtenerCancionPorGenero(string nombreDelGenero)
+        public List<AlbumDTO> ObtenerAlbumPorTodosLosCampos(string campo)
         {
-            return _busquedaRepository.ObtenerCancionPorGenero(nombreDelGenero);
+            List<AlbumDTO> albumPorTitulo = _busquedaRepository.ObtenerAlbumPorTitulo(campo);
+            List<AlbumDTO> albumPorArtista = _busquedaRepository.ObtenerAlbumPorArtista(campo);
 
-        }
+            List<AlbumDTO> albums = new List<AlbumDTO>();
+            albums.AddRange(albumPorTitulo);
+            albums.AddRange(albumPorArtista);
 
-        public List<CancionDTO> ObtenerCancionPorTitulo(string nombre)
-        {
-            return _busquedaRepository.ObtenerCancionPorTitulo(nombre);
+            return albums;
         }
     }
 }

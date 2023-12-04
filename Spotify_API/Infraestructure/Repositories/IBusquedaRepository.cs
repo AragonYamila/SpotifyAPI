@@ -8,5 +8,8 @@ namespace Spotify_API.Infraestructure.Repositories
         List<CancionDTO> ObtenerCancionPorArtista(string nombreDelArtista);
         List<CancionDTO> ObtenerCancionPorGenero(string nombreDelGenero);
         List<CancionDTO> ObtenerCancionPorAlbum(string nombreDelAlbum);
+        List<ArtistaDTO> ObtenerArtistaPorNombre(string nombreDelArtista);
+        List<AlbumDTO> ObtenerAlbumPorTitulo(string tituloDelAlbum);
+        List<AlbumDTO> ObtenerAlbumPorArtista(string nombreDelArtista);
     }
 }
