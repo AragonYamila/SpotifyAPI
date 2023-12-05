@@ -12,11 +12,11 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
-builder.Services.AddScoped<ICancionService, CancionService>();
+builder.Services.AddScoped<IPlaylistService, PlaylistService>();
+builder.Services.AddScoped<IPlaylistRepository, PlaylistRepository>();
 builder.Services.AddScoped<IBusquedaRepository, BusquedaRepository>();
 builder.Services.AddScoped<IBusquedaService, BusquedaService>();
 
-builder.Services.AddScoped<ICancionRepository, CancionRepository>();
 
 builder.Services.AddScoped<DB_SpotifyContext>();
 

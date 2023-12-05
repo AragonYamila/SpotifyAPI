@@ -20,7 +20,6 @@ namespace Spotify_API.Controllers
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(AlbumDTO))]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(ArtistaDTO))]
         [ProducesResponseType(StatusCodes.Status204NoContent, Type = typeof(string))]
-
         public dynamic Buscar(string campo)
         {
             try

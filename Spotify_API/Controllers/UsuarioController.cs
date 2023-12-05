@@ -111,5 +111,6 @@ namespace Spotify_API.Controllers
 
             return _usuarioService.RegistrarUsuario(usuarioARegistrar);
         }
+      
     }
 }
